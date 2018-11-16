@@ -1,1 +1,6 @@
 foo: imfoo
+spring:
+  application:
+    name: uaa-service
+  profiles:
+    include: test
