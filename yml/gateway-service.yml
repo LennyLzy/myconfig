@@ -3,6 +3,6 @@ zuul:
     api-log:
       path: /log/**
       serviceId: logger-service
-     api-gateway
+    api-gateway：
       path: /gateway/**
       serviceId: gateway-service
