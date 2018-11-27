@@ -1,8 +1,8 @@
 zuul:
   routes:
-    api-log:
-      path: /log/**
-      serviceId: logger-service
-    api-gateway：
-      path: /gateway/**
+    api-a:
+      path: /api-a/**
       serviceId: gateway-service
+    api-b:
+      path: /api-b/**
+      serviceId: logger-service
