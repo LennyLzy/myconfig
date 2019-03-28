@@ -1,4 +1,4 @@
-foo: foo,version1
+foo: foo,version2
 # 配置gateway路由
 spring:
   cloud:
