@@ -9,10 +9,11 @@ spring:
           # 为true,自动创建路由,路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问
           enabled: true
           lowerCaseServiceId: true
-#       routes:
-#         id: eureka-server
-#         uri: http://localhost:18080
-#         predicates: Path=/eureka/**
+      routes:
+      - id: test
+        uri: https://www.baidu.com
+        predicates: 
+        - Path=/test
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
