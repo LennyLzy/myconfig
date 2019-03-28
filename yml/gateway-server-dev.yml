@@ -10,10 +10,10 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: eureka-server
+        id: eureka-server
         uri: http://localhost:18080
         predicates: 
-          - Path=/eureka/**
+          Path=/eureka/**
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
