@@ -9,6 +9,7 @@ spring:
           # 为true,自动创建路由,路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问
           enabled: true
           lowerCaseServiceId: true
+      # 通过post  /actuator/bus-refresh 就能让gateway重新拉取路由配置，实现动态路由
       routes:
       - id: test
         uri: https://www.baidu.com
