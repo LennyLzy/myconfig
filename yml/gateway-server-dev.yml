@@ -16,6 +16,12 @@ spring:
         - Path=/test
         filters:
         - StripPrefix= 1
+      - id: bilibili
+        uri: https://www.bilibili.com/
+        predicates:
+        - Path= /bilibili
+        filters:
+        - StripPrefix= 1
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
