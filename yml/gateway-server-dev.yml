@@ -30,6 +30,15 @@ spring:
         - Path= /bilibili
         filters:
         - StripPrefix= 1
+      - id: fallback
+        uri: https://www.baidu.com
+        predicates: 
+        - Path=/**
+        filters:
+        - name: Hystrix
+        args:
+          name: fallbackcmd
+          fallbackUri: forward:/fallback
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
