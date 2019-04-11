@@ -5,11 +5,11 @@ hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 30
 spring:
   cloud:
     gateway:
-#       default-filters:
-#       - name: Hystrix
-#         args:
-#           name: fallbackcmd
-#           fallbackUri: forward:/fallback
+      default-filters:
+      - name: Hystrix
+        args:
+          name: fallbackcmd
+          fallbackUri: forward:/fallback
       discovery:
         locator:
           # 是否可以通过其他服务的serviceId来转发到具体的服务实例。默认为false
@@ -30,15 +30,6 @@ spring:
         - Path= /bilibili
         filters:
         - StripPrefix= 1
-      - id: fallback
-        uri: https://www.baidu.com
-        predicates: 
-        - Path=/**
-        filters:
-        - name: Hystrix
-          args:
-            name: fallbackcmd
-            fallbackUri: forward:/fallback
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
