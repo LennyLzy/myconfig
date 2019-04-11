@@ -36,9 +36,9 @@ spring:
         - Path=/**
         filters:
         - name: Hystrix
-        args:
-          name: fallbackcmd
-          fallbackUri: forward:/fallback
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallback
 #         - id: host_route
 # 	      uri: http://httpbin.org:80/get
 # 	      predicates:
